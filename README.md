@@ -1,72 +1,106 @@
-Contribution: 2014-08-12 20:00
+Counter example in Rust
+=================================
 
-Contribution: 2014-08-13 20:00
+<!-- MAGIC COMMENT: DO NOT DELETE! Everything above this line is hidden on NEAR Examples page -->
 
-Contribution: 2014-08-18 20:00
+## Description
 
-Contribution: 2014-08-19 20:00
+This contract implements simple counter backed by storage on blockchain.
+Contract in `contract/src/lib.rs` provides methods to increment / decrement counter and get it's current value or reset.
 
-Contribution: 2014-08-19 20:01
+Plus and minus buttons increase and decrease value correspondingly. When button L is toggled, a little light turns on, just for fun. RS button is for reset. LE and RE buttons to let the robot wink at you.
 
-Contribution: 2014-08-19 20:02
+## To Run
+Open in the Gitpod link above or clone the repository.
 
-Contribution: 2014-08-19 20:03
+```
+git clone https://github.com/near-examples/rust-counter
+```
 
-Contribution: 2014-08-20 20:00
 
-Contribution: 2014-08-20 20:01
+## Setup [Or skip to Login if in Gitpod](#login)
+Install dependencies:
 
-Contribution: 2014-08-20 20:02
+```
+yarn
+```
 
-Contribution: 2014-08-20 20:03
+If you don't have `Rust` installed, complete the following 3 steps:
 
-Contribution: 2014-08-20 20:04
+1) Install Rustup by running:
 
-Contribution: 2014-08-21 20:00
+```
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
 
-Contribution: 2014-08-21 20:01
+([Taken from official installation guide](https://www.rust-lang.org/tools/install))
 
-Contribution: 2014-08-21 20:02
+2) Configure your current shell by running:
 
-Contribution: 2014-08-21 20:03
+```
+source $HOME/.cargo/env
+```
 
-Contribution: 2014-08-21 20:04
+3) Add wasm target to your toolchain by running:
 
-Contribution: 2014-08-29 20:00
+```
+rustup target add wasm32-unknown-unknown
+```
 
-Contribution: 2014-09-01 20:00
+Next, make sure you have `near-cli` by running:
 
-Contribution: 2014-09-02 20:00
+```
+near --version
+```
 
-Contribution: 2014-09-05 20:00
+If you need to install `near-cli`:
 
-Contribution: 2014-09-08 20:00
+```
+npm install near-cli -g
+```
 
-Contribution: 2014-09-10 20:00
+## Login
+If you do not have a NEAR account, please create one with [NEAR Wallet](https://wallet.testnet.near.org).
 
-Contribution: 2014-09-10 20:01
+In the project root, login with `near-cli` by following the instructions after this command:
 
-Contribution: 2014-09-10 20:02
+```
+near login
+```
 
-Contribution: 2014-09-10 20:03
+Modify the top of `src/config.js`, changing the `CONTRACT_NAME` to be the NEAR account that was just used to log in.
 
-Contribution: 2014-09-11 20:00
+```javascript
+…
+const CONTRACT_NAME = 'YOUR_ACCOUNT_NAME_HERE'; /* TODO: fill this in! */
+…
+```
 
-Contribution: 2014-09-11 20:01
+Start the example!
 
-Contribution: 2014-09-11 20:02
+```
+yarn start
+```
 
-Contribution: 2014-09-11 20:03
+## To Test
 
-Contribution: 2014-09-12 20:00
+```
+yarn test
+```
 
-Contribution: 2014-09-12 20:01
+## To Explore
 
-Contribution: 2014-09-22 20:00
+- `contract/src/lib.rs` for the contract code
+- `src/index.html` for the front-end HTML
+- `src/main.js` for the JavaScript front-end code and how to integrate contracts
+- `src/test.js` for the JS tests for the contract
 
-Contribution: 2014-09-22 20:01
+## To Build the Documentation
 
-Contribution: 2014-09-24 20:00
-
-Contribution: 2014-09-24 20:01
-
+```
+cd contract
+cargo doc --no-deps --open
+```
+# Rust-Wasm-Near
+# RUST-WASM-NEAR
+# RUST-WASM-NEAR
